@@ -204,27 +204,27 @@ ASSET_MANAGER.downloadAll(function () {
     gameEngine.start();
 });
 
-window.onload = function () {
-    var socket = io.connect("http://24.16.255.56:8888/socket.io/socket.io.js");
+//window.onload = function () {
+//    var socket = io.connect("http://24.16.255.56:8888/socket.io/socket.io.js");
 
-    socket.on("load", function (data) {
-        console.log(data);
-    });
+//    socket.on("load", function (data) {
+//        console.log(data);
+//    });
 
-    var text = document.getElementById("text");
-    var saveButton = document.getElementById("save");
-    var loadButton = document.getElementById("load");
+//    var text = document.getElementById("text");
+//    var saveButton = document.getElementById("save");
+//    var loadButton = document.getElementById("load");
 
-    saveButton.onclick = function () {
-        console.log("save");
-        text.innerHTML = "Saved."
-        socket.emit("save", { studentname: "Nadir Mohamed", statename: "aState", data: "Goodbye World" });
-    };
+//    saveButton.onclick = function () {
+//        console.log("save");
+//        text.innerHTML = "Saved."
+//        socket.emit("save", { studentname: "Nadir Mohamed", statename: "aState", data: "Goodbye World" });
+//    };
 
-    loadButton.onclick = function () {
-        console.log("load");
-        text.innerHTML = "Loaded."
-        socket.emit("load", { studentname: "Nadir Mohamed", statename: "aState" });
-    };
+//    loadButton.onclick = function () {
+//        console.log("load");
+//        text.innerHTML = "Loaded."
+//        socket.emit("load", { studentname: "Nadir Mohamed", statename: "aState" });
+//    };
 
-};
+//};
